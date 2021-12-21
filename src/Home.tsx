@@ -19,13 +19,14 @@ import {
   shortenAddress,
 } from "./candy-machine";
 
-const ConnectButton = styled(WalletDialogButton)``;
+const ConnectButton = styled(WalletDialogButton)``;    // wallet only
 
-const CounterText = styled.span``; // add your styles here
+const CounterText = styled.span``; // count down clocks 
 
 const MintContainer = styled.div``; // add your styles here
 
-const MintButton = styled(Button)``; // add your styles here
+const MintButton = styled(Button)`transition: color 0.3s ease-in;margin: 0.5em 0em;color: blue;font-size: 1em;
+border-radius: 100px`; // add your styles here
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -181,7 +182,7 @@ const Home = (props: HomeProps) => {
 
       <MintContainer>
         {!wallet ? (
-          <ConnectButton>Connect Wallet</ConnectButton>
+          <ConnectButton>Connect Wallet</ConnectButton>  // change wallet connect tile
         ) : (
           <MintButton
             disabled={isSoldOut || isMinting || !isActive}
@@ -189,7 +190,7 @@ const Home = (props: HomeProps) => {
             variant="contained"
           >
             {isSoldOut ? (
-              "SOLD OUT"
+              "Sold Out!!"
             ) : isActive ? (
               isMinting ? (
                 <CircularProgress />

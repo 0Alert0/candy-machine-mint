@@ -56,7 +56,7 @@ const theme = createTheme({
         MuiButton: {
             root: {
                 textTransform: undefined,
-                padding: '12px 16px',
+                padding: '12px 80px',  // button size
             },
             startIcon: {
                 marginRight: 8,
