@@ -8,7 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /*background-color: #303030;/*web background color*/
-  color: #fffffe; /*word color*/
+  color: #ffffff; /*word color*/
   font-size: 19px;
   
   background: url("SW.png") no-repeat , 
